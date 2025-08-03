@@ -60,6 +60,25 @@
     <p>Price: ₹1,000</p>
     <button>Click to Order</button>
   </div>
+  # HTML snippet with QR image and UPI button for Fampay
+upi_html = """
+<div class="product">
+  <h2>Support Smuzzz 💸</h2>
+  <p>Scan & Pay via UPI</p>
+  <img src="https://raw.githubusercontent.com/smuz10-ui/Smuz-/main/qr.png" alt="Fampay QR" width="250" style="border-radius:12px; margin-bottom:10px;">
+  <p><b>UPI ID:</b> 8298904271@fam</p>
+  <a href="upi://pay?pa=8298904271@fam&pn=Smuzzz&cu=INR">
+    <button>Pay via Fampay</button>
+  </a>
+</div>
+"""
+
+# Save to file so Smuzzz can embed this QR section in his site
+qr_snippet_path = "/mnt/data/fampay_qr_section.html"
+with open(qr_snippet_path, "w", encoding="utf-8") as file:
+    file.write(upi_html)
+
+qr_snippet_path
   <div class="product">
     <h2>Laptop</h2>
     <p>Price: ₹1,64,000 (₹ converted from $1968)</p>
